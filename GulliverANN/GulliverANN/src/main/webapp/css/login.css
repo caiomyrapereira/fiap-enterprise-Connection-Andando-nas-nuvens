@@ -1,0 +1,96 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(../images/copacabana-beach-g058ad4071_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login_box {
+  margin-left: auto;
+  margin-right: auto; 
+  background-color: #CAD9C3;
+  border-radius: 1rem;
+  width: 40%;
+  height: 30%;
+}
+
+.login {
+  max-width: 500px;
+  width: 100%;
+  align-items: center;
+}
+
+.login input,
+button {
+  height: 50px;
+}
+
+.login .summit {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.login hr {
+  max-width: 225px;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #6c977f;
+  border-color: transparent;
+  transition: all 0.9s ease;
+}
+
+#btn-google {
+  background-image: url(../images/icone_google.svg);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  background-position: 10px 50%;
+  background-color: white;
+}
+
+#btn-google:hover {
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+
+#btn-facebook {
+  background-image: url(../images/icone_facebook.svg);
+  background-repeat: no-repeat;
+  max-width: 500px;
+  background-position: 8px 50%;
+  background-color: var(--btn-facebook);
+  color: #fff;
+}
+
+#btn-facebook:hover {
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  color: #2d97a1;
+  font-size: 1.85rem;
+  padding-top: 2rem !important;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #16737b;
+  font-size: 1.35rem;
+}
+
+a {
+  color: #001d65;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #526fb7;
+  font-weight: 800;
+  text-decoration: none;
+}

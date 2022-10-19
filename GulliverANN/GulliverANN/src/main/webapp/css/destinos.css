@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.destinos_header {
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin-top: -10% !important;
+  filter: opacity(100%);
+  z-index: 1;
+}
+
+.desc-text {
+  width: 70%;
+}
+
+.destino-titulo {
+  font-size: 2.1rem;
+  background: linear-gradient(to right, #2DA193 0%, #557663 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+.clima-date {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #2DA193 0%, #557663 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+.min {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #2DA193 0%, #557663 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+.max {
+  font-size: 1.1rem;
+  color: #C26B65;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+.destino-desc {
+  font-size: 1.4rem;
+}
+
+.splide__slide .card .card-img {
+  height: 185px;
+}
+
+@media screen and (max-width: 1300px) {
+  .description {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+  }
+
+  #destino-img {
+    margin-top: 1rem !important;
+    width: 80%;
+  }
+
+  .desc-text {
+    margin-left: 2rem !important;
+  }
+}
+
+.desc-text {
+  margin-top: 3rem;
+  margin-right: 25px;
+}
+
+#destino-img {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.card {
+  height: 100% !important;
+}
+
+.card-footer {
+  background-color: var(--cyan);
+  color: #fff;
+}
+
+h2 {
+  background: linear-gradient(to right, #2DA193 0%, #557663 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-size: 26px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+h5 {
+  color: rgb(55, 55, 55);
+}
+
+ol {
+  margin-left: 12rem;
+  margin-top: 1.5rem;
+}
+
+.splide__arrow--prev{
+  left: -0.1px !important;
+}
+.splide__arrow--next{
+  right: -0.1px !important;
+}

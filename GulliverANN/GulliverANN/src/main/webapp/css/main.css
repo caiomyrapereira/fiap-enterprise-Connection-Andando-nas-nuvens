@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #557663 #cad9c3;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #cad9c3;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #557663;
+  border-radius: 20px;
+  border: 2px double #3b5446;
+}
+
+/*--footer--*/
+.rodape {
+  height: 80px;
+}
+
+body {
+  background-color: #d4e1ce;
+}
+
+::selection {
+  background: #4c6356ad;
+  color: rgb(255, 255, 255);
+}
+
+
+/*--  boostrap --*/
+:root {
+  --blue: #425d9e;
+  /*! Gulliver Paleta -- SAN MARINO */
+  --green: #557663;
+  /*! Gulliver Paleta -- BASE COLOR DARK-GREEN CYAN */
+  --cyan: #2d97a1;
+  /*! Gulliver Paleta -- CYAN TONE */
+  --primary: #557663;
+  /*! Gulliver Paleta -- BASE COLOR DARK-GREEN CYAN */
+  --secondary: #cad9c3;
+  /*! Gulliver Paleta -- LIGHT SHADE OF GREEN */
+  --success: #557663;
+  /*! Gulliver Paleta -- BASE COLOR DARK-GREEN CYAN */
+  --primary-shadow: #2b3d32;
+  --light: #edecd5;
+  /*! Gulliver Paleta -- LIGHT SHADE OF YELLOW */
+  --bs-link-color: #557663;
+  /*! Gulliver Paleta -- BASE COLOR DARK-GREEN CYAN */
+  --bs-link-hover-color: #27362d;
+  /*! Gulliver Paleta -- SOMBRA PARA COLOR DARK-GREEN CYAN */
+  --bs-primary-rgb: 85, 118, 99;
+  /*! Gulliver Paleta -- LIGHT SHADE OF GREEN */
+  --btn-facebook: #4753bf;
+}
+
+.navbar {
+  filter: opacity(90%) !important;
+z-index: 9999;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+  color: #658874;
+  font-weight: 500;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'48;
+}
+
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+  margin-left: 1rem;
+}
+
+.nav-link:hover {
+  color: #9dbdaa;
+  transition: all 0.5s ease-out;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  background: #2DA193;
+background: linear-gradient(to right, #2DA193 0%, #557663 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+footer {
+  color: rgb(27, 27, 27);
+  font-weight: 500;
+  background-color: #557663d5;
+  filter: opacity(70%);
+  margin-top: 6rem !important;
+}
+
+h5 {
+  color: rgb(55, 55, 55);
+}
+
+
+.navbar-toggler {
+  background-color: #62856f !important;
+  border:#466653 1px solid !important;
+}
