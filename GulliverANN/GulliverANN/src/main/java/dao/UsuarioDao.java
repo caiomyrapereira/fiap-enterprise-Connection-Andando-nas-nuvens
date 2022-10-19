@@ -18,7 +18,7 @@ private DataSource dataSource;
 	}
 	
 	@Override
-	public void create(Usuario object) {
+	public String create(Usuario object) {
 		   try{
 			// declaro a STRING SQL correspondente ao comando
 			// substituindo os valores pelo caractere “?”
@@ -37,13 +37,15 @@ private DataSource dataSource;
 				// se deu certo, a variável RES retorna != 0
 					if (res != 0) {
 						System.out.println("Usuario alterado com sucesso");
+						return "Usuario alterado com sucesso";
 					}
 					else {
-						throw new RuntimeException("Erro ao inserir usuario ");
+						return "Erro ao inserir usuario";
 					}
 				   }
 				   catch (Exception ex) {
 					  System.out.println("UsuarioDAO.CREATE = "+ex.getMessage());
+					  return "UsuarioDAO.CREATE = "+ex.getMessage();
 				   }
 	}
 

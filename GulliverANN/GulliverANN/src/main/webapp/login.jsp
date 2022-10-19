@@ -24,7 +24,8 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-xxl">
       <a class="navbar-brand" onclick="navToInicio(this)" href="#">
-        <img src="./images/Logo2.svg" alt="Logo Gulliver Travel" width="120" height="60" class="d-inline-block align-text-top">
+        <img src="./images/Logo2.svg" alt="Logo Gulliver Travel" width="120" height="60"
+          class="d-inline-block align-text-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
         aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +37,7 @@
             <a class="nav-link active" aria-current="page" href="index.jsp" onclick="navToInicio(this)">Início</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="fazer.jsp"  onclick="navToFazer(this)">O que fazer</a>
+            <a class="nav-link" href="fazer.jsp" onclick="navToFazer(this)">O que fazer</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="hospedagens.jsp" onclick="navToHospedagens(this)">Hospedagens</a>
@@ -55,45 +56,46 @@
   </nav>
 
   <main id="app" class="container-fluid m-0 g-0">
-  
-  <div class="login_box mt-5">
-<div class="row align-items-center">
-    <div class="my-4">
-      <h1 class="text-center mb-3">ACESSE A SUA CONTA</h1>
-      <h2 class="text-center">Já tem uma conta?</h2>
-    </div>
 
-    <section class="login m-auto px-4">
-      <form>
-        <div class="mb-3">
-          <input type="email" class="form-control w-100 rounded" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="E-mail" required>
+    <div class="login_box mt-5">
+      <div class="row align-items-center">
+        <div class="my-4">
+          <h1 class="text-center mb-3">ACESSE A SUA CONTA</h1>
+          <h2 class="text-center">Já tem uma conta?</h2>
         </div>
-        <div class="mb-3">
-          <input type="password" class="form-control w-100 rounded" id="exampleInputPassword1" placeholder="Senha"
-            required>
-        </div>
-        <button type="submit" class="btn w-100 rounded mb-3 summit">Entrar</button>
-      </form>
-      <center>
-        <a href="#" class="text-center mb-5">Esqueci minha senha</a>
-      </center>
-      <div class="my-4 d-flex justify-content-between">
-        <hr>
-        <p class="mx-2">OU</p>
-        <hr>
+
+        <section class="login m-auto px-4">
+          <form action="logar" method="get">
+            <div class="mb-3">
+              <input type="email" name="txtEmail" class="form-control w-100 rounded" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="E-mail" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" name="txtSenha" class="form-control w-100 rounded" id="exampleInputPassword1" placeholder="Senha"
+                required>
+            </div>
+            <button type="submit" class="btn w-100 rounded mb-3 summit">Entrar</button>
+          </form>
+          <center>
+            <a href="#" class="text-center mb-5">Esqueci minha senha</a>
+          </center>
+          <div class="my-4 d-flex justify-content-between">
+            <hr>
+            <p class="mx-2">OU</p>
+            <hr>
+          </div>
+          <button id="btn-google" class="w-100 mb-3 border-0 mx-auto shadow-lg">
+            Entrar com o Google
+          </button>
+          <button id="btn-facebook" class=" w-100 mb-4 border-0 shadow-lg">
+            Entrar com o Facebook
+          </button>
+          <p class="text-center mb-5">Ainda não tem uma conta? <a href="cadastro.jsp"
+              onclick="navToCadastro('${''}')">Cadastre-se.</a> </p>
+
+        </section>
       </div>
-      <button id="btn-google" class="w-100 mb-3 border-0 mx-auto shadow-lg">
-        Entrar com o Google
-      </button>
-      <button id="btn-facebook" class=" w-100 mb-4 border-0 shadow-lg">
-        Entrar com o Facebook
-      </button>
-      <p class="text-center mb-5">Ainda não tem uma conta? <a  href="cadastro.jsp" onclick="navToCadastro('${''}')">Cadastre-se.</a> </p>
-    
-    </section>
-  </div>
-</div>
+    </div>
   </main>
 
   <footer class="rodape bg-primary d-flex  flex-column justify-content-center align-items-center">
@@ -117,7 +119,7 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-  
+
 </body>
 
 </html>

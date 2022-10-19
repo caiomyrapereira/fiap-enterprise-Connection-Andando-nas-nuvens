@@ -24,7 +24,8 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-xxl">
       <a class="navbar-brand" onclick="navToInicio(this)" href="#">
-        <img src="./images/Logo2.svg" alt="Logo Gulliver Travel" width="120" height="60" class="d-inline-block align-text-top">
+        <img src="./images/Logo2.svg" alt="Logo Gulliver Travel" width="120" height="60"
+          class="d-inline-block align-text-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
         aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,34 +56,34 @@
   </nav>
 
   <main id="app" class="container-fluid m-0 g-0">
-  
-  <div class="login_box mt-5">
-<div class="row align-items-center">
-    <div class="my-4">
-      <h1 class="text-center mb-3">CRIAR A SUA CONTA</h1>
-      <h2 class="text-center">Já tem uma conta?</h2>
-    </div>
 
-    <section class="login m-auto mb-5 px-4">
-      <form action="novoUsuario" method="POST">
-        <div class="mb-3">
-          <input type="text" class="form-control w-100 rounded" id="exampleInputEmail1"
-            placeholder="Nome" name="txtNome" required>
+    <div class="login_box mt-5">
+      <div class="row align-items-center">
+        <div class="my-4">
+          <h1 class="text-center mb-3">CRIAR A SUA CONTA</h1>
+          <h2 class="text-center">Já tem uma conta?</h2>
         </div>
-        <div class="mb-3">
-          <input type="email" class="form-control w-100 rounded" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="E-mail" name="txtEmail" required>
-        </div>
-        <div class="mb-3">
-          <input type="password" class="form-control w-100 rounded" id="exampleInputPassword1" placeholder="Senha"
-           name="txtSenha" required>
-        </div>
-        <button type="submit" class="btn w-100 rounded mb-3 summit">Cadastrar</button>
-      </form>
-    
-    </section>
-  </div>
-</div>
+
+        <section class="login m-auto mb-5 px-4">
+          <form name="cad" action="novoUsuario" method="POST">
+            <div class="mb-3">
+              <input type="text" class="form-control w-100 rounded" id="exampleInputEmail1" placeholder="Nome"
+                name="txtNome" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control w-100 rounded" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="E-mail" name="txtEmail" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control w-100 rounded" id="exampleInputPassword1" placeholder="Senha"
+                name="txtSenha" required>
+            </div>
+            <button type="submit" class="btn w-100 rounded mb-3 summit">Cadastrar</button>
+          </form>
+
+        </section>
+      </div>
+    </div>
   </main>
 
   <footer class="rodape bg-primary d-flex  flex-column justify-content-center align-items-center">
@@ -94,7 +95,7 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <script src="./js/main.js"></script>
-
+  <script src="./js/cadastro.js"></script>
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
@@ -106,7 +107,7 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-  
+
 </body>
 
 </html>

@@ -11,24 +11,19 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Usuario;
 
-@WebServlet("/novoUsuario")
-public class Cadastro extends HttpServlet {
-        protected void doPost(HttpServletRequest request, HttpServletResponse response)
+@WebServlet("/logar")
+public class Login extends HttpServlet {
+        protected void doGet(HttpServletRequest request, HttpServletResponse response)
              throws IOException {
 
-
-            String nome = request.getParameter("txtNome");
             String email = request.getParameter("txtEmail");
             String senha = request.getParameter("txtSenha");
 
-            System.out.println(nome);
             System.out.println(email);
             System.out.println(senha);
 
 
             Usuario userLogin = new Usuario();
-            userLogin.setId(1);
-            userLogin.setNome(nome);
             userLogin.setEmail(email);
             userLogin.setSenha(senha);
 
@@ -36,11 +31,13 @@ public class Cadastro extends HttpServlet {
             DataSource dataSource = new DataSource();
             //passo o DataSource para o DAO
             UsuarioDao usuarioDao = new UsuarioDao(dataSource);
+            Usuario user;
+            user = usuarioDao.read(userLogin);
+            if(user != null){
+            	System.out.println("Usuario Logado");	
+            } else {
+            	System.out.println("Usuario Não existe");	
+            }
             
-            String msg = usuarioDao.create(userLogin);
-
-            System.out.println(msg);
-            response.getWriter().write(msg);
-            response.getWriter().flush();
         }
 }
