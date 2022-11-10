@@ -41,7 +41,7 @@
             <a class="nav-link" href="hospedagens.jsp" onclick="navToHospedagens(this)">Hospedagens</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="restaurantes.jsp" onclick="navToRestaurantes(this)">Restaurantes</a>
+            <a class="nav-link" href="restaurantes" onclick="navToRestaurantes(this)">Restaurantes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="login.jsp" onclick="navToLogin(this)"><span class="material-symbols-outlined">

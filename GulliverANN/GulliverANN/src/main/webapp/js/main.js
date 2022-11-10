@@ -1,5 +1,3 @@
-
-/*
 let view = 'inicio';
 const title = document.querySelector('title');
 const links = document.querySelectorAll('.nav-link');
@@ -25,50 +23,9 @@ async function getToken() {
 
 getToken();
 
-document.addEventListener('DOMContentLoaded', function () {
-  navToInicio();
-});
-
-function navToInicio(target) {
-  if (target) {
-    links.forEach((l) => l.classList.remove('active'));
-    target.classList.add('active');
-  }
-  navigateTo('./pages/inicio.html');
-  title.text = 'Início | Gulliver Traveller';
-}
-function navToFazer(target) {
-  links.forEach((l) => l.classList.remove('active'));
-  target.classList.add('active');
-  navigateTo('./pages/fazer.html');
-  title.text = ' O que fazer | Gulliver Traveller';
-}
-function navToHospedagens(target) {
-  links.forEach((l) => l.classList.remove('active'));
-  target.classList.add('active');
-  navigateTo('./pages/hospedagens.html');
-  title.text = ' Hospedagens | Gulliver Traveller';
-}
-function navToRestaurantes(target) {
-  links.forEach((l) => l.classList.remove('active'));
-  target.classList.add('active');
-  navigateTo('./pages/restaurantes.html');
-  title.text = ' Restaurantes | Gulliver Traveller';
-}
-function navToLogin(target) {
-  links.forEach((l) => l.classList.remove('active'));
-  target.classList.add('active');
-  navigateTo('./pages/login.jsp');
-  title.text = ' Login | Gulliver Traveller';
-}
 function navToDestino(id) {
-  navigateTo('./pages/destinos.html', id);
+  navigateTo('./destinos.jsp', id);
   title.text = ' Destinos | Gulliver Traveller';
-}
-
-function navToCadastro(id) {
-  navigateTo('./pages/cadastro.jsp', id);
-  title.text = ' Cadastro | Gulliver Traveller';
 }
 
 function navigateTo(path, id = '') {
@@ -96,7 +53,6 @@ function navigateTo(path, id = '') {
     });
 }
 
-*/
 const destinos = [
   {
     id: 'rj',
