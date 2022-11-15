@@ -4,6 +4,10 @@
   cursor: pointer;
 }
 
+.splide__slide img {
+  height: 10rem;
+}
+
 .inicio-header {
   background-color: var(--light);
   display: flex;

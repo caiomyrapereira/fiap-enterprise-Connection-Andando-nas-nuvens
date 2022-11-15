@@ -1,7 +1,7 @@
 <header id="destinos_header" class="destinos_header p-4">
 </header>
 <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#" onclick="navToInicio(this)">InÃ­cio</a></li>
+    <li class="breadcrumb-item"><a href="index.jsp">Início</a></li>
     <li class="breadcrumb-item active" id="destino-nome" aria-current="page"></li>
 </ol>
 </nav>

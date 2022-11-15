@@ -23,7 +23,7 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-xxl">
-      <a class="navbar-brand" onclick="navToInicio(this)" href="#">
+      <a class="navbar-brand" href="index.jsp">
         <img src="./images/Logo2.svg" alt="Logo Gulliver Travel" width="120" height="60"
           class="d-inline-block align-text-top">
       </a>

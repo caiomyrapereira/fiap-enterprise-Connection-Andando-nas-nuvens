@@ -16,14 +16,16 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/fazer.css">
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-xxl">
-      <a class="navbar-brand" onclick="navToInicio(this)" href="#">
-        <img src="./images/Logo2.svg" alt="Logo Gulliver Travel" width="120" height="60" class="d-inline-block align-text-top">
+      <a class="navbar-brand" href="index.jsp">
+        <img src="./images/Logo2.svg" alt="Logo Gulliver Travel" width="120" height="60"
+          class="d-inline-block align-text-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
         aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +34,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.jsp" onclick="navToInicio(this)">Início</a>
+            <a class="nav-link active" aria-current="page" href="index.jsp" onclick="navToInicio(this)">InÃ­cio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="fazer.jsp" onclick="navToFazer(this)">O que fazer</a>
@@ -44,7 +46,7 @@
             <a class="nav-link" href="restaurantes" onclick="navToRestaurantes(this)">Restaurantes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="login.jsp" onclick="navToLogin(this)"><span class="material-symbols-outlined">
+            <a class="nav-link" href="login.jsp" onclick="navToLogin(this)"><span class="material-symbols-outlined">
                 account_circle
               </span></a>
           </li>
@@ -54,73 +56,70 @@
   </nav>
 
   <main id="app" class="container-fluid m-0 g-0">
-  <header class="fazer_header  d-flex justify-content-center align-items-center">
-    <h3 class="text-center mb-3">Parques, gastronomia, vida noturna e entretenimento</h3>
-        <form class="d-flex justify-content-between align-items-center form">
-            <input type="text" class="form-control local" placeholder="Para onde você gostaria de ir? *"
-                aria-label="Para onde você gostaria de ir? *" required>
+    <header class="fazer_header  d-flex justify-content-center align-items-center">
+      <h3 class="text-center mb-3">Parques, gastronomia, vida noturna e entretenimento</h3>
+      <form class="d-flex justify-content-between align-items-center form">
+        <input type="text" class="form-control local" placeholder="Para onde vocï¿½ gostaria de ir? *"
+          aria-label="Para onde vocï¿½ gostaria de ir? *" required>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <input type="date" class="form-control date" placeholder="Data" aria-label="Data" required>
-                <button class="border border-0 btn_search">
-                    <img src="./images/icons8-busca-pelo-amor-50.png" alt="BotÃ£o para pesquisar">
-                </button>
-            </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <input type="date" class="form-control date" placeholder="Data" aria-label="Data" required>
+          <button class="border border-0 btn_search">
+            <img src="./images/icons8-busca-pelo-amor-50.png" alt="BotÃ£o para pesquisar">
+          </button>
+        </div>
 
-        </form>
-</header>
+      </form>
+    </header>
 
-<section class="splide container-xxl mb-2" aria-labelledby="carousel-heading">
-    <h2 class="mb-4" id="carousel-heading">Principais destinos para o seu fim de semana</h2>
+    <section class="splide container-xxl mb-2" aria-labelledby="carousel-heading">
+      <h2 class="mb-4" id="carousel-heading">Principais destinos para o seu fim de semana</h2>
 
-    <div class="splide__track">
+      <div class="splide__track">
         <ul class="splide__list" id="destinos-list"></ul>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="entretenimento" class="container-xxl">
+    <section id="entretenimento" class="container-xxl">
 
-    <h2 class="p-4">Rolê em SP? Conheça diversas opções de entretenimento em São Paulo - SP.</h2>
+      <h2 class="p-4">Rolï¿½ em SP? Conheï¿½a diversas opï¿½ï¿½es de entretenimento em Sï¿½o Paulo - SP.</h2>
 
-    <div class="atracoes d-flex justify-content-between">
+      <div class="atracoes d-flex justify-content-between">
 
         <div class="card h-100">
-            <img src="./images/excursão grafitti.jpg" class="card-img-top" alt="ExcursÃ£o privada de Graffiti">
-            <div class="card-body">
-                <h5 class="card-title">ExcursÃ£o privada de Graffiti</h5>
-                <span>xxxxx</span>
-                <p class="card-text"> A partir de $736 por</p>
-            </div>
+          <img src="./images/excursï¿½o grafitti.jpg" class="card-img-top" alt="ExcursÃ£o privada de Graffiti">
+          <div class="card-body">
+            <h5 class="card-title">ExcursÃ£o privada de Graffiti</h5>
+            <span>xxxxx</span>
+            <p class="card-text"> A partir de $736 por</p>
+          </div>
         </div>
 
 
         <div class="card h-100">
-            <img src="./images/caminhada.jpg" class="card-img-top" alt="Caminhada no centro de SÃ£o Paulo">
-            <div class="card-body">
-                <h5 class="card-title">Caminhada no centro de SP</h5>
-                <span>xxxxx</span>
-                <p class="card-text"> A partir de $736 por</p>
-            </div>
+          <img src="./images/caminhada.jpg" class="card-img-top" alt="Caminhada no centro de SÃ£o Paulo">
+          <div class="card-body">
+            <h5 class="card-title">Caminhada no centro de SP</h5>
+            <span>xxxxx</span>
+            <p class="card-text"> A partir de $736 por</p>
+          </div>
         </div>
 
         <div class="card h-100">
-            <img src="./images/favela-paraisopolis.webp" class="card-img-top"
-                alt="Tradicional Feijoada na laje com samba">
-            <div class="card-body">
-                <h5 class="card-title">Favela de ParaisÃ³polis
-                </h5>
-                <span >xxxxx</span>
-                <p class="card-text"> A partir de $736 por</p>
-            </div>
+          <img src="./images/favela-paraisopolis.webp" class="card-img-top"
+            alt="Tradicional Feijoada na laje com samba">
+          <div class="card-body">
+            <h5 class="card-title">Favela de ParaisÃ³polis
+            </h5>
+            <span>xxxxx</span>
+            <p class="card-text"> A partir de $736 por</p>
+          </div>
         </div>
-</section>
-
-<link rel="stylesheet" href="./css/fazer.css">
-<script src="./js/fazer.js"></script>
+    </section>
   </main>
 
   <footer class="rodape bg-primary d-flex  flex-column justify-content-center align-items-center">
-    <p class="m-0 w-0">Projeto Gulliver | Todos os direitos reservados ©</p>
+    <p class="m-0 w-0">Projeto Gulliver | Todos os direitos reservados ï¿½</p>
   </footer>
 
   <!-- JavaScript Bundle with Popper -->
@@ -128,7 +127,7 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <script src="./js/main.js"></script>
-
+  <script src="./js/fazer.js"></script>
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
@@ -140,7 +139,7 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-  
+
 </body>
 
 </html>
