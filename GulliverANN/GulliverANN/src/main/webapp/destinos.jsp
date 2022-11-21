@@ -1,14 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <header id="destinos_header" class="destinos_header p-4">
 </header>
 <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.jsp">Início</a></li>
+    <li class="breadcrumb-item"><a href="index.jsp">InÃ­cio</a></li>
     <li class="breadcrumb-item active" id="destino-nome" aria-current="page"></li>
 </ol>
 </nav>
 
 
 <section class="container description d-flex justify-content-between align-items-start">
-    <div class="desc-text">
+    <div class="desc-text dyn-font">
         <h5 id="destino-titulo" class="destino-titulo"></h5>
         <p id="destino-desc" class="destino-desc text-muted"></p>
     </div>
@@ -21,13 +22,13 @@
 
 <section class="mt-5 mb-2 container">
     <div class="mx-auto">
-        <h2 class="mb-4">Clima atual em <span id="destino"></span></h2>
+        <h2 class="mb-4 dyn-font">Clima atual em <span id="destino"></span></h2>
         <div id="clima" class="d-flex gap-4"></div>
     </div>
 </section>
 
 <section class="splide container-xxl mb-2" aria-labelledby="carousel-heading">
-    <h2 class="mb-4" id="carousel-heading">Melhores Restaurantes</h2>
+    <h2 class="mb-4" id="carousel-heading dyn-font">Melhores Restaurantes</h2>
 
     <div class="splide__track">
         <ul class="splide__list">

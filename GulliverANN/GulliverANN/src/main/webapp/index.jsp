@@ -58,7 +58,7 @@
 
     <main id="app" class="container-fluid m-0 g-0">
       <header class="inicio-header">
-        <h1 class="text-center">Diga sim para novos momentos.</h5>
+        <h1 class="text-center dyn-font">Diga sim para novos momentos.</h5>
           <div class="form-floating mt-0 mb-5">
             <input type="text" class="form-control" id="search" placeholder="Qual é o seu destino?">
             <label class="search-label w-100" for="floatingInput">Qual é o seu destino? <span
@@ -76,8 +76,8 @@
 
       <section class="container-xxl mb-2 d-flex align-items-center">
         <div>
-          <h2 class="mb-4" id="carousel-heading">Seja bem-vindo (a), a sua próxima viagem se inicia aqui!</h2>
-          <p>
+          <h2 class="mb-4 dyn-font" id="carousel-heading">Seja bem-vindo (a), a sua próxima viagem se inicia aqui!</h2>
+          <p class="dyn-font">
             A Gulliver Travel é uma plataforma sobre turismo que visa ajudar viajantes do Brasil inteiro a encontrarem o
             melhor destino para sua próxima viagem. Aqui você encontra dicas de hospedagens, gastronomia e
             entretenimento. Experimente nosso gerador de roteiros: gere automaticamente um roteiro para a sua viagem do
@@ -91,7 +91,7 @@
       </section>
 
       <section class="splide container-xxl mb-2" aria-labelledby="carousel-heading">
-        <h2 class="mb-4" id="carousel-heading">Principais destinos para o seu fim de semana</h2>
+        <h2 class="mb-4 dyn-font" id="carousel-heading">Principais destinos para o seu fim de semana</h2>
 
         <div class="splide__track">
           <ul class="splide__list" id="destinos-list"></ul>
@@ -100,7 +100,7 @@
 
 
       <section class="splide container-xxl mb-2" aria-labelledby="carousel-heading">
-        <h2 class="mb-4" id="carousel-heading">Curta com a família</h2>
+        <h2 class="mb-4 dyn-font" id="carousel-heading">Curta com a família</h2>
 
         <div class="splide__track">
           <ul class="splide__list">
@@ -151,18 +151,24 @@
     </main>
 
     <footer class="rodape bg-primary d-flex  flex-column justify-content-center align-items-center">
-      <p class="m-0 w-0">Projeto Gulliver | Todos os direitos reservados ©</p>
+      <p class="m-0 w-0 dyn-font">Projeto Gulliver | Todos os direitos reservados ©</p>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="./plugins/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script src="./js/main.js"></script>
-    <script src="./js/inicio.js"></script>
-
-
     <div vw class="enabled">
+      <div class="side-button left-rounded mb-1 p-1 bg-light contraste" accesskey="1" onclick="increaseFont()">
+        <span class="fs-5 fw-bold">A+</span>
+      </div>
+      <div class="side-button left-rounded mb-1 p-1 bg-light contraste" accesskey="2" onclick="decreaseFont()">
+        <span class="fs-5 fw-bold">A-</span>
+      </div>
+      <div class="side-button left-rounded mb-1 p-1 bg-light contraste" accesskey="3" onclick="window.toggleContrast()"
+        onkeydown="window.toggleContrast()">
+        <img class="m-auto" src="./img/contrast.svg">
+      </div>
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
         <div class="vw-plugin-top-wrapper"></div>
@@ -173,6 +179,8 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
+    <script src="./js/main.js"></script>
+    <script src="./js/inicio.js"></script>
   </body>
 
   </html>

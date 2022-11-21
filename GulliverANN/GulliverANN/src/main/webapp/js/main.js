@@ -13,7 +13,7 @@ async function getToken() {
     params.append('client_id', amadeusAPI.client_id);
     params.append('client_secret', amadeusAPI.client_secret);
     params.append('grant_type', 'client_credentials');
-    
+
     const rsp = await axios.post('https://test.api.amadeus.com/v1/security/oauth2/token', params);
     amadeusAPI.token = rsp.data.access_token;
   } catch (error) {
@@ -101,22 +101,98 @@ const destinos = [
 ];
 
 function getEmpresa(id) {
-  let empresa
+  let empresa;
   switch (id) {
     case 'AD':
-      empresa = 'Azul Linhas Aereas Brasileiras'
+      empresa = 'Azul Linhas Aereas Brasileiras';
       break;
     case 'G3':
-      empresa = 'GOL Linhas Aereas S.A'
+      empresa = 'GOL Linhas Aereas S.A';
       break;
     case 'LA':
-      empresa = 'LATAM Airlines Group S.A. dba LATAM Airlines Group'
+      empresa = 'LATAM Airlines Group S.A. dba LATAM Airlines Group';
       break;
     default:
-      empresa = id
+      empresa = id;
       break;
   }
 
+  return empresa;
+}
 
-  return empresa
+// FONT-SIZE
+let fontLvl = 1;
+
+function increaseFont() {
+  const fonts = document.querySelectorAll('.dyn-font');
+  if (fontLvl >= 3) return;
+  fontLvl++;
+  for (const i in fonts) {
+    const element = fonts[i];
+    if (typeof fonts[i] != 'object') return;
+    const compStyles = window.getComputedStyle(element);
+    const fs = compStyles.getPropertyValue('font-size');
+    element.style.fontSize = `${parseFloat(fs) + 5}px`;
+  }
+}
+
+function decreaseFont() {
+  const fonts = document.querySelectorAll('.dyn-font');
+  if (fontLvl <= 1) return;
+  fontLvl--;
+  for (const i in fonts) {
+    const element = fonts[i];
+    if (typeof fonts[i] != 'object') return;
+    const compStyles = window.getComputedStyle(element);
+    const fs = compStyles.getPropertyValue('font-size');
+    element.style.fontSize = `${parseFloat(fs) - 5}px`;
+  }
+}
+
+// ALTO CONTRAST
+const Contrast = {
+  storage: 'contrastState',
+  cssClass: 'contrast',
+  currentState: null,
+  check: checkContrast,
+  getState: getContrastState,
+  setState: setContrastState,
+  toogle: toogleContrast,
+  updateView: updateViewContrast,
+};
+
+window.toggleContrast = function () {
+  Contrast.toogle();
+};
+
+Contrast.check();
+
+function checkContrast() {
+  this.updateView();
+}
+
+function getContrastState() {
+  return localStorage.getItem(this.storage) === 'true';
+}
+
+function setContrastState(state) {
+  localStorage.setItem(this.storage, '' + state);
+  this.currentState = state;
+  this.updateView();
+}
+
+function updateViewContrast() {
+  var body = document.body;
+
+  if (!body) return;
+
+  if (this.currentState === null) this.currentState = this.getState();
+
+  if (this.currentState) {
+    if (body.id != 'loginBody') body.classList.add(this.cssClass);
+  } else body.classList.remove(this.cssClass);
+}
+
+function toogleContrast() {
+  this.setState(!this.currentState);
 }

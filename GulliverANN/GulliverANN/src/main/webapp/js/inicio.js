@@ -5,7 +5,7 @@ destinos.forEach((destino) => {
 
 function cardTemplate(destino) {
   return `
-    <li class="splide__slide">
+    <li class="splide__slide" type="button" onclick="navToDestino('${destino.id}')">
       <div class="d-flex flex-column lh-1">
         <img class="rounded-4" src="${destino.imgDesc}" alt="${destino.name}">
         <h5 class="card-title">${destino.name}</h5>

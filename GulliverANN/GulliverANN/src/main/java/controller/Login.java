@@ -14,30 +14,28 @@ import model.Usuario;
 @WebServlet("/logar")
 public class Login extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response)
-             throws IOException {
+                        throws IOException {
 
-            String email = request.getParameter("txtEmail");
-            String senha = request.getParameter("txtSenha");
+                String email = request.getParameter("txtEmail");
+                String senha = request.getParameter("txtSenha");
 
-            System.out.println(email);
-            System.out.println(senha);
+                System.out.println(email);
+                System.out.println(senha);
 
+                Usuario userLogin = new Usuario();
+                userLogin.setEmail(email);
+                userLogin.setSenha(senha);
 
-            Usuario userLogin = new Usuario();
-            userLogin.setEmail(email);
-            userLogin.setSenha(senha);
+                DataSource dataSource = new DataSource();
+                // passo o DataSource para o DAO
+                UsuarioDao usuarioDao = new UsuarioDao(dataSource);
+                Usuario user;
+                user = usuarioDao.read(userLogin);
+                if (user != null) {
+                        System.out.println("Usuario Logado");
+                } else {
+                        System.out.println("Usuario Não existe");
+                }
 
-
-            DataSource dataSource = new DataSource();
-            //passo o DataSource para o DAO
-            UsuarioDao usuarioDao = new UsuarioDao(dataSource);
-            Usuario user;
-            user = usuarioDao.read(userLogin);
-            if(user != null){
-            	System.out.println("Usuario Logado");	
-            } else {
-            	System.out.println("Usuario Não existe");	
-            }
-            
         }
 }

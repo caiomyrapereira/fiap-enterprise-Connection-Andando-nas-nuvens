@@ -118,3 +118,92 @@ h5 {
   background-color: #62856f !important;
   border:#466653 1px solid !important;
 }
+
+/* SIDE PANEL BUTTONS */
+.side-button {
+  text-align: center;
+  cursor: pointer;
+  margin: 0px 0px 0px -100px;
+  max-width: none;
+  padding: 0;
+  border: 0;
+}
+
+div[vw] {
+  margin-top: -45vh;
+}
+
+.access-button,
+.left-rounded {
+  border-bottom-left-radius: var(--bs-border-radius-pill) !important;
+  border-top-left-radius: var(--bs-border-radius-pill) !important;
+}
+
+.access-button {
+  background-color: #004b99;
+}
+
+/* CORES EM ALTO CONTRASTE */
+.contrast,
+.contrast div,
+.contrast li,
+.contrast ol,
+.contrast footer,
+.contrast section,
+.contrast main,
+.contrast aside,
+.contrast article {
+  background: #080707 !important;
+  color: #fff !important;
+}
+
+.navbar div, .nav-item, .navbar li, .enabled {
+  background: inherit !important;
+}
+
+.contrast .btn-manual {
+  background: #3c3c3c !important;
+  color: #fff !important;
+}
+.contrast .home-img {
+  filter: brightness(0) invert(1);
+}
+
+.contrast .nav_menu a {
+  color: var(--color-white);
+}
+
+.contrast .side-button {
+  --bs-bg-opacity: 1;
+  background: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.contrast .side-button span {
+  color: #080707 !important;
+}
+
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6,
+.contrast p,
+.contrast label,
+.contrast strong,
+.contrast em,
+.contrast cite,
+.contrast q,
+.contrast i,
+.contrast b,
+.contrast u,
+.contrast span {
+  color: #fff !important;
+}
+
+.contrast .text-degrade {
+  background: -webkit-linear-gradient(90deg, #fff 0%, var(--color-yellow) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

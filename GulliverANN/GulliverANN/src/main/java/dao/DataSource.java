@@ -11,34 +11,32 @@ public class DataSource {
 	private String username;
 	private String password;
 	private String database;
-	private int    port;
-	
+	private int port;
+
 	public DataSource() {
 		try {
-			DriverManager.registerDriver( new OracleDriver());
+			DriverManager.registerDriver(new OracleDriver());
 			hostname = "localhost";
-			port     = 1521;
+			port = 1521;
 			username = "system";
-			password = "qet20000";
+			password = "gulliver";
 			database = "xe";
-			url = "jdbc:oracle:thin:@"+
-                     hostname+":"+
-                     port+":"+database;
-			connection =
-     DriverManager.getConnection(url,username,password);
+			url = "jdbc:oracle:thin:@" +
+					hostname + ":" +
+					port + ":" + database;
+			connection = DriverManager.getConnection(url, username, password);
 			if (connection != null) {
 				System.out.println("Conectado com Sucesso");
-			}
-			else {
+			} else {
 				System.out.println("Falhou na conexao");
 			}
-		}
-		catch(Exception ex) {
-			System.out.println("Datasource ERRO: "+ex.getMessage());
+		} catch (Exception ex) {
+			System.out.println("Datasource ERRO: " + ex.getMessage());
 		}
 	}
-	public Connection getConnection(){
-         return this.connection;
- 	}
-	
+
+	public Connection getConnection() {
+		return this.connection;
+	}
+
 }

@@ -14,33 +14,30 @@ import model.Usuario;
 @WebServlet("/novoUsuario")
 public class Cadastro extends HttpServlet {
         protected void doPost(HttpServletRequest request, HttpServletResponse response)
-             throws IOException {
+                        throws IOException {
 
+                String nome = request.getParameter("txtNome");
+                String email = request.getParameter("txtEmail");
+                String senha = request.getParameter("txtSenha");
 
-            String nome = request.getParameter("txtNome");
-            String email = request.getParameter("txtEmail");
-            String senha = request.getParameter("txtSenha");
+                System.out.println(nome);
+                System.out.println(email);
+                System.out.println(senha);
 
-            System.out.println(nome);
-            System.out.println(email);
-            System.out.println(senha);
+                Usuario userLogin = new Usuario();
+                userLogin.setId(1);
+                userLogin.setNome(nome);
+                userLogin.setEmail(email);
+                userLogin.setSenha(senha);
 
+                DataSource dataSource = new DataSource();
+                // passo o DataSource para o DAO
+                UsuarioDao usuarioDao = new UsuarioDao(dataSource);
 
-            Usuario userLogin = new Usuario();
-            userLogin.setId(1);
-            userLogin.setNome(nome);
-            userLogin.setEmail(email);
-            userLogin.setSenha(senha);
+                String msg = usuarioDao.create(userLogin);
 
-
-            DataSource dataSource = new DataSource();
-            //passo o DataSource para o DAO
-            UsuarioDao usuarioDao = new UsuarioDao(dataSource);
-            
-            String msg = usuarioDao.create(userLogin);
-
-            System.out.println(msg);
-            response.getWriter().write(msg);
-            response.getWriter().flush();
+                System.out.println(msg);
+                response.getWriter().write(msg);
+                response.getWriter().flush();
         }
 }

@@ -36,20 +36,19 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
               <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.jsp" onclick="navToInicio(this)">Início</a>
+                  <a class="nav-link" aria-current="page" href="index.jsp">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="fazer.jsp" onclick="navToFazer(this)">O que fazer</a>
+                  <a class="nav-link" href="fazer.jsp">O que fazer</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="hospedagens.jsp" onclick="navToHospedagens(this)">Hospedagens</a>
+                  <a class="nav-link" href="hospedagens.jsp">Hospedagens</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="restaurantes.jsp" onclick="navToRestaurantes(this)">Restaurantes</a>
+                  <a class="nav-link active" href="restaurantes">Restaurantes</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="login.jsp" onclick="navToLogin(this)"><span
-                      class="material-symbols-outlined">
+                  <a class="nav-link" href="login.jsp"><span class="material-symbols-outlined">
                       account_circle
                     </span></a>
                 </li>
@@ -71,7 +70,7 @@
             </form>
           </header>
 
-          <h2 class="mb-4 text-center" id="carousel-heading">MELHORES RESTAURANTES DA REGIÃO</h2>
+          <h2 class="mb-4 text-center dyn-font" id="carousel-heading">MELHORES RESTAURANTES DA REGIÃO</h2>
 
 
           <article class="hoteis-body container-xxl m-auto">
@@ -102,7 +101,7 @@
           </article>
         </main>
 
-        <footer class="rodape bg-primary d-flex  flex-column justify-content-center align-items-center">
+        <footer class="rodape bg-primary d-flex  flex-column justify-content-center align-items-center dyn-font">
           <p class="m-0 w-0">Projeto Gulliver | Todos os direitos reservados ©</p>
         </footer>
 
@@ -112,8 +111,17 @@
 
         <script src="./js/main.js"></script>
 
-
         <div vw class="enabled">
+          <div class="side-button left-rounded mb-1 p-1 bg-light contraste" accesskey="1" onclick="increaseFont()">
+            <span class="fs-5 fw-bold">A+</span>
+          </div>
+          <div class="side-button left-rounded mb-1 p-1 bg-light contraste" accesskey="2" onclick="decreaseFont()">
+            <span class="fs-5 fw-bold">A-</span>
+          </div>
+          <div class="side-button left-rounded mb-1 p-1 bg-light contraste" accesskey="3" onclick="window.toggleContrast()"
+            onkeydown="window.toggleContrast()">
+            <img class="m-auto" src="./img/contrast.svg">
+          </div>
           <div vw-access-button class="active"></div>
           <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
